@@ -9,7 +9,17 @@ class Todos extends Component
 {
     public $todo;
 
+    public $title;
+
     public string $search = '';
+
+
+    public function submit()
+    {
+        Todo::create([
+            'title' => $this->title
+        ]);
+    }
 
     public function render()
     {
