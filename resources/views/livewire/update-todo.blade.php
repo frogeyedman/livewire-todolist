@@ -18,15 +18,15 @@
                     </div>
                     <div class="widget-content-right">
                         @if(!$todo->is_done)
-                            <button wire:click="markAsDone({{$todo->id}})" class="border-0 btn-transition btn btn-outline-success">
+                            <button wire:click="markAsDone" class="border-0 btn-transition btn btn-outline-success">
                                 <i class="fa fa-check"></i>
                             </button>
                         @else
-                            <button wire:click="markAsNotDone({{$todo->id}})" class="border-0 btn-transition btn btn-success">
+                            <button wire:click="markAsNotDone" class="border-0 btn-transition btn btn-success">
                                 <i class="fa fa-check"></i>
                             </button>
                         @endif
-                        <button wire:click="destroy({{$todo->id}})" class="border-0 btn-transition btn btn-outline-danger">
+                        <button wire:click="destroy" class="border-0 btn-transition btn btn-outline-danger">
                             <i class="fa fa-trash"></i>
                         </button>
                     </div>
