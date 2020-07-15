@@ -12,7 +12,8 @@
                     </div>
                     <div class="widget-content-left">
                         <div class="widget-heading">{{$todo->title}}
-                            <div class="badge badge-danger ml-2">Rejected</div>
+                            @livewire('parts.edit-title', ['todo' => $todo], key($todo->id))
+                            <div wire:click="$emit('showEdit')" class="badge badge-danger ml-2">Rejected</div>
                         </div>
                         <div class="widget-subheading"><i>By Bob</i></div>
                     </div>
@@ -28,6 +29,9 @@
                         @endif
                         <button wire:click="destroy" class="border-0 btn-transition btn btn-outline-danger">
                             <i class="fa fa-trash"></i>
+                        </button>
+                        <button wire:click="$emit('edit', {{$todo->id}})" class="border-0 btn-transition btn btn-outline-danger">
+                            <i class="fa fa-edit"></i>
                         </button>
                     </div>
                 </div>

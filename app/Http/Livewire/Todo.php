@@ -7,6 +7,9 @@ use Livewire\Component;
 
 class Todo extends Component
 {
+    /**
+     * @var TodoModel $todo
+     */
     public $todo;
 
     public function mount(TodoModel $todo)
@@ -32,6 +35,5 @@ class Todo extends Component
     public function destroy()
     {
         $this->todo->delete();
-        $this->emit('renderTodos');
     }
 }
