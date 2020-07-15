@@ -2,22 +2,21 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Todo;
-use App\User;
+use App\Models\Todo as TodoModel;
 use Livewire\Component;
 
-class UpdateTodo extends Component
+class Todo extends Component
 {
     public $todo;
 
-    public function mount(Todo $todo)
+    public function mount(TodoModel $todo)
     {
         $this->todo = $todo;
     }
 
     public function render()
     {
-        return view('livewire.update-todo');
+        return view('livewire.todo');
     }
 
     public function markAsDone()

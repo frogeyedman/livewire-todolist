@@ -6,7 +6,7 @@
         <div class="card-body">
             @foreach($todos as $todo)
                 <div>
-                    @livewire('update-todo', ['todo' => $todo], key($todo->id))
+                    @livewire('todo', ['todo' => $todo], key($todo->id))
                 </div>
             @endforeach
         </div>
